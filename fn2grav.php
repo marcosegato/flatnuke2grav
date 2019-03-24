@@ -20,7 +20,7 @@
 // -->> YOUR CUSTOM PARAMETERIZATION
 // -->> ==============================================
 
-$flatnuke_baseurl = "my.website.ext";										// basic URL of your Flatnuke installation (do NOT specify 'http/https' nor 'www')
+$flatnuke_baseurl = "my.website.ext";                                       // basic URL of your Flatnuke installation (do NOT specify 'http/https' nor 'www')
 $flatnuke_inpath  = "none_News";                                            // Flatnuke section containing the news you want to move to Grav (none_News is the default choice)
 $gravnews_outpath = "./sections/$flatnuke_inpath/none_newsdata_grav";       // output path where Grav's new files will be created
 
