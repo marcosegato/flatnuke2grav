@@ -147,7 +147,8 @@ foreach (load_news_list("none_News") as $mynews) {
     $gravnews_item = str_replace('%%TITLE%%',    utf8_encode($newsdata['title']), $gravnews_item);
     $gravnews_item = str_replace('%%DATE%%',     date('H:i m/d/Y', $newsdata['date']), $gravnews_item);
     $gravnews_item = str_replace('%%AUTHOR%%',   $admin, $gravnews_item);
-    $gravnews_item = str_replace('%%CATEGORY%%', preg_replace("/[\.]*[a-z0-9]{1,4}$/i","",utf8_encode($newsdata['category'])), $gravnews_item);
+    //$gravnews_item = str_replace('%%CATEGORY%%', preg_replace("/[\.]*[a-z0-9]{1,4}$/i","",utf8_encode($newsdata['category'])), $gravnews_item);
+    $gravnews_item = str_replace('%%CATEGORY%%', "blog", $gravnews_item);
     $gravnews_item = str_replace('%%TAGS%%',     utf8_encode(implode(', ', $newsdata['tags'])), $gravnews_item);
     $gravnews_item = str_replace('%%HEADER%%',   utf8_encode($newsdata['header']), $gravnews_item);
     if(trim($newsdata['body']) != "") {
