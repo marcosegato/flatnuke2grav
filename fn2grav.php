@@ -152,7 +152,7 @@ foreach (load_news_list("none_News") as $mynews) {
     $gravnews_item = str_replace('%%TAGS%%',     utf8_encode(implode(', ', $newsdata['tags'])), $gravnews_item);
     $gravnews_item = str_replace('%%HEADER%%',   utf8_encode($newsdata['header']), $gravnews_item);
     if(trim($newsdata['body']) != "") {
-        $gravnews_item .= "===\n\n" . utf8_encode($newsdata['header']) . "\n\n" . utf8_encode($newsdata['body']) . "\n\n";
+        $gravnews_item .= "===\n\n" . utf8_encode($newsdata['body']) . "\n\n";
     }
 
     //echo "<pre>" . $gravnews_item . "</pre>";    // DEBUG
