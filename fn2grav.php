@@ -224,6 +224,10 @@ function html2grav_img($string, $news) {
 	// remove emoticons HTML code
 
 	$string = preg_replace("/<img src=\'forum\/emoticon\/(.+?)\'.alt=\'(.*?)\' \/>/i","[$2]", $string);
+	
+	// remove target tag from links
+
+	$string = preg_replace("/target.?=.?('|\").?blank_.?('|\")/","", $string);
 
 	// convert HTML <IMG> tag to Markdown code when local images
 
