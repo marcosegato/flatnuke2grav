@@ -76,7 +76,7 @@ $fn_localfilename = "";
 $link_array       = array();
 
 $gravnews_txtmask = "---
-title: %%TITLE%%
+title: '%%TITLE%%'
 date: %%DATE%%
 author: %%AUTHOR%%
 body_classes: header-lite fullwidth blogstyling
@@ -144,6 +144,7 @@ foreach (load_news_list("none_News") as $mynews) {
 
     $gravnews_item = $gravnews_txtmask;
 
+    $newsdata['title'] = str_replace("'", "", $newsdata['title']);
     $gravnews_item = str_replace('%%TITLE%%',    utf8_encode($newsdata['title']), $gravnews_item);
     $gravnews_item = str_replace('%%DATE%%',     date('H:i m/d/Y', $newsdata['date']), $gravnews_item);
     $gravnews_item = str_replace('%%AUTHOR%%',   $admin, $gravnews_item);
